@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-
-AUTHOR = 'Karl Hobley'
-SITENAME = 'This week in Wagtail'
+AUTHOR = "Karl Hobley"
+SITENAME = "This week in Wagtail"
 SITEURL = ''
 
 PATH = 'content'
@@ -31,5 +27,6 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# Use document-relative URLs when developing
+# Overridden in publish settings
+RELATIVE_URLS = True
