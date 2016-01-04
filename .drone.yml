@@ -1,9 +1,8 @@
 build:
   image: python:3.5
   environment:
-    - PYTHONPATH=$BUILD_DIR
+    - PYTHONPATH=$$BUILD_DIR
   commands:
-    - env
     - pip3.5 install -r requirements.txt
     - pelican -s publishconf.py
 
