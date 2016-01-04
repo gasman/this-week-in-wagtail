@@ -1,0 +1,17 @@
+build:
+  image: python:3.5
+  commands:
+    - pip3.5 install -r requirements.txt
+    - pelican
+
+deploy:
+  rsync:
+    user: twiw
+    host: kaneda.kaed.uk
+    source: output/*
+    target: ~/htdocs
+    delete: true
+    recursive: true
+
+    when:
+      branch: master
