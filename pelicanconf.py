@@ -1,5 +1,5 @@
 AUTHOR = "Karl Hobley"
-SITENAME = "This week in Wagtail"
+SITENAME = "This Week in Wagtail"
 SITEURL = ''
 
 PATH = 'content'
