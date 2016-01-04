@@ -2,7 +2,7 @@ build:
   image: python:3.5
   commands:
     - pip3.5 install -r requirements.txt
-    - pelican
+    - pelican -s publishconf.py
 
 deploy:
   rsync:
