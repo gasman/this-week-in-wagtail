@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body {
+                 width: 100% !important;
+                 min-width: 100%;
+                 -webkit-text-size-adjust: 100%;
+                 -ms-text-size-adjust: 100%;
+                 margin: 0;
+                 padding: 0;
+                 color: #444;
+                 font-family: 'Helvetica Neue', Helvetica, sans-serif;
+             }
+
+             .container {
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 660px;
+                 padding: 0;
+                 border: 1px solid #DCDCDC;
+             }
+
+             .display-correct-box {
+                 padding: 6px;
+                 font-size: 12px;
+                 text-align: center;
+             }
+
+             header {
+                 border-top: 1px solid #E6E6E6;
+                 border-bottom: 1px solid #E6E6E6;
+                 background-color: #FDFDFD;
+                 line-height: 40px;
+                 padding: 6px 20px;
+             }
+
+             header img.logo {
+                 display: inline;
+                 vertical-align: middle;
+                 width: 30px;
+             }
+
+             header span.header-text {
+                 font-size: 23px;
+                 font-weight: bold;
+                 margin-left: 10px
+             }
+
+             header aside {
+                 float: right;
+             }
+
+             .content {
+                 padding: 6px 20px;
+             }
+
+            footer {
+                border-top: 1px solid #E6E6E6;
+                background-color: #FDFDFD;
+                text-align: center;
+            }
+
+            p {
+                margin: 0px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            ul {
+                margin-top: 0px;
+            }
+
+            li {
+                font-size: 16px;
+            }
+
+            a, a:visited {
+                color: #2a7ae2;
+                text-decoration: none;
+            }
+
+            code {
+                color: #c7254e;
+                border: 1px solid #e8e8e8;
+                border-radius: 3px;
+                background-color: #eeeeff;
+                font-weight: 600;
+                font-family: monospace;
+            }
+
+            h1, h2 {
+                font-size: 19px;
+                margin: 10px 0px;
+                font-weight: bold;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin: 16px 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+                <div class="display-correct-box">
+                    <span>Email isn't displaying correctly?</span>
+                    <a href="{% block selfurl %}{% endblock selfurl %}">Read it on the Web</a>
+                </div>
+                <header>
+                    <img class="logo" src="https://wagtail.io/static/wagtailadmin/images/wagtail-logo.svg" alt="This Week in Wagtail">
+                    <span class="header-text">This Week in Wagtail</span>
+
+                    <aside>
+                        {% block number_and_date %}{% endblock number_and_date %} </span>
+                    </aside>
+                </header>
+
+                <div class="content">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+
+                <footer>
+                    <a href="https://wagtail.io">wagtail.io</a> |
+                    <a href="https://twitter.com/WagtailCMS">@WagtailCMS</a> |
+                    <a href="https://github.com/torchbox/wagtail">GitHub</a>
+                    <br />
+                    <a href="*|UNSUBSCRIBE_URL|*">Unsubscribe</a> |
+                    <a href="*|UPDATE_PROFILE_URL|*">Change email address</a> |
+                    <a href="{{ self.selfurl() }}">Read this issue on the Web</a>
+                </footer>
+            </div>
+    </body>
+</html>
